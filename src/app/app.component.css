@@ -1,0 +1,28 @@
+
+
+.todoForm {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); 
+    background-color: #eee;
+    margin: 5%;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.completeButton {
+    display:inline;
+    color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+.addTaskForm {
+    position:relative; 
+    width: 820px; 
+    text-align:center
+}
+.addTaskButton {
+    position:relative; 
+    width: 827px; 
+    text-align:center;
+    background-color: #ff1493;
+    color: white;
+}

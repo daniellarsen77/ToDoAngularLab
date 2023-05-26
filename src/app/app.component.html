@@ -1,0 +1,28 @@
+<div class="todoForm">
+  <h2>TODO List</h2>
+  <h4>A place to store your todos</h4>
+
+  
+  <div *ngFor="let todo of todoList; index as i">
+    <p>
+        {{i+1}}. 
+        <!-- Handing strikethrough using ngIf/else -->
+        <span *ngIf="!todo.completed; else Completed">
+            <button class="completeButton" (click)="completeTask(i)">COMPLETE</button> 
+            {{todo.task}}
+        </span>
+        <ng-template #Completed>
+          <s>{{todo.task}}</s>
+        </ng-template>
+
+      <button (click)="deleteTask(i)" style="position:absolute; right: 8%">x</button>
+    </p>
+  </div>
+
+  <div style="text-align: center">
+    <input class="addTaskForm" placeholder="Add your to-do here" [(ngModel)]="newTask.task"><br/>
+    <button class="addTaskButton" (click)="addTask()">Add</button>
+  </div>
+
+</div>
+
